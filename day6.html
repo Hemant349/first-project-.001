@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Webpage</title>
+</head>
+<body>
+
+    <h1 id="h1" style="text-align :center;">Welcome to My Website</h1>
+
+    <p style="text-align :center;">This is a simple paragraph explaining the content of the webpage.</p>
+  <div style="text-align :center;">
+    <button id="button-id">Dark Mode</button>
+</div>
+
+</body>
+<script >
+    const heading = document.getElementById('h1');
+    console.log(document)
+   // console.log(data);
+   heading.innerText = 'Learning to change theme '
+   heading.style.color = 'black '
+
+
+     const button = document.getElementById("button-id");
+    //  button.disabled = true ;
+    let isDark = false ;
+
+    button.addEventListener("click", function (){
+         
+          button.innerText = "Light Mode"
+     if ( isDark === false)
+     {
+       document.body.style.backgroundColor ="black";
+       document.body.style.color = " white";
+       button.style.backgroundColor = "black";
+       button.style.color = "white";
+       button.innerText = "Light Mode"
+       isDark = true;
+     }
+
+    else 
+    {
+     document.body.style.backgroundColor ="white";
+     document.body.style.color = " black";
+     button.style.backgroundColor = "white ";
+     button.style.color = "black";
+     button.innerText = "Dark Mode"
+     isDark = false;
+    }
+   
+
+    });
+     
+</script>
+</html>
